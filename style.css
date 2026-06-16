@@ -1,133 +1,255 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-header{
+/* Header */
+
+header {
     display: flex;
-    height: 80px;
-    background-color: white;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(203, 200, 200);
-    /* position: fixed;
-    /* width: 100%;*/
-}
-
-
-.myntra-home{
     height: 80px;
+    background-color: white;
+    border-bottom: 1px solid rgb(203, 200, 200);
+    padding: 0 20px;
+}
+
+/* Logo */
+
+.logo_container {
+    margin-left: 10px;
+}
+
+.myntra-home {
     width: 100px;
+    height: 80px;
 }
-.logo_container
-{
-    margin-left: 4%;
-}
-.action_bar{
-    margin-right: 4%;
 
+/* Navigation */
 
-}
-.nav_bar 
-{
-
+.nav_bar {
     display: flex;
     justify-content: space-evenly;
-    min-width: 500px;
-
+    gap: 20px;
 }
+
 .nav_bar a {
     font-size: 14px;
     letter-spacing: 0.3px;
-    color:#282c3f;
+    color: #282c3f;
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
     padding: 28px 0;
-    border-bottom:2px solid white;
-
-
+    border-bottom: 2px solid white;
 }
 
-.nav_bar a:hover{
-
-    border-bottom:2px solid red;
-    
+.nav_bar a:hover {
+    border-bottom: 2px solid red;
 }
 
-.nav_bar a sup{
+.nav_bar a sup {
     color: #d21a76;
     font-size: 10px;
-
 }
 
+/* Search */
 
-.search_bar{
+.search_bar {
     height: 40px;
+    width: 30%;
     min-width: 200px;
     display: flex;
     align-items: center;
-    width: 30%;
-
 }
-.search_icon{
-    box-sizing: content-box;
-    height: 20px;
+
+.search_icon {
     padding: 10px;
     background-color: #f5f5f6;
-    color: #282c3f;
-    font-weight: 300;
     border-radius: 4px 0 0 4px;
+    color: #282c3f;
+}
 
-}
-.search_input{
-    color: #696e79;
-    background-color: #f5f5f6;
-    flex-grow: 1;
+.search_input {
+    flex: 1;
     height: 40px;
-    border-radius: 0px 4px 4px 0;
-    border: 0;
+    border: none;
+    background-color: #f5f5f6;
+    color: #696e79;
+    padding-left: 10px;
+    border-radius: 0 4px 4px 0;
 }
-.action_bar{
+
+/* Action Bar */
+
+.action_bar {
     display: flex;
-    min-width: 200px;
-      justify-content: space-evenly;
-    
+    gap: 20px;
 }
 
 .action_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    
+    cursor: pointer;
+}
 
+.action_name {
+    font-size: 12px;
 }
-.banner_image{
-   width: 100%;
-   height: auto;
+
+/* Banner */
+
+.banner_container {
+    margin: 40px 0;
 }
-.banner_container{
- margin: 40px 0;   
+
+.banner_image {
+    width: 100%;
+    height: auto;
 }
-.cotegray_heading{
+
+/* Headings */
+
+.cotegray_heading {
     text-transform: uppercase;
     color: #3e4152;
     letter-spacing: .15em;
     font-size: 1.8em;
-    max-height: 5em;
     font-weight: 700;
-    margin: 50px 0 10px 30px;
+    margin: 50px 20px 20px;
 }
-.cotegory_item{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    
+
+/* Products */
+
+.cotegory_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
-.sale_item{
-    height: ;
+
+.sale_item {
     width: 250px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.sale_item:hover {
+    transform: scale(1.03);
+}
+
+/* =====================
+   Tablet View
+===================== */
+
+@media screen and (max-width: 1024px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    .nav_bar {
+        gap: 10px;
+    }
+
+    .nav_bar a {
+        font-size: 12px;
+    }
+
+    .search_bar {
+        width: 25%;
+    }
+
+    .sale_item {
+        width: 200px;
+    }
+}
+
+/* =====================
+   Mobile View
+===================== */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+
+    .logo_container {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .myntra-home {
+        width: 90px;
+        height: auto;
+    }
+
+    .nav_bar {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .nav_bar a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .search_bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .action_bar {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .cotegray_heading {
+        font-size: 22px;
+        text-align: center;
+        margin: 25px 10px;
+        letter-spacing: 2px;
+    }
+
+    .sale_item {
+        width: 45%;
+    }
+}
+
+/* =====================
+   Small Mobile
+===================== */
+
+@media screen and (max-width: 480px) {
+
+    .nav_bar {
+        gap: 5px;
+    }
+
+    .nav_bar a {
+        font-size: 10px;
+    }
+
+    .action_name {
+        font-size: 10px;
+    }
+
+    .cotegray_heading {
+        font-size: 18px;
+    }
+
+    .sale_item {
+        width: 90%;
+    }
 }
