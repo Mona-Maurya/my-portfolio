@@ -1,95 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" >
-   
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    padding:20px;
+
+    font-family:'Segoe UI',sans-serif;
+
+    background:linear-gradient(
+        -45deg,
+        #000000,
+        #1a0000,
+        #3b0000,
+        #8b0000
+    );
+
+    background-size:400% 400%;
+
+    animation:bgAnimation 12s ease infinite;
+}
+
+@keyframes bgAnimation{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+
+    width:100%;
+    max-width:500px;
+
+    text-align:center;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 25px rgba(255,0,60,.4),
+    0 0 60px rgba(255,0,60,.2);
+
+    z-index:10;
+}
+
+.photo{
+    width:220px;
+    height:220px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid #ff003c;
+
+    box-shadow:
+    0 0 20px #ff003c,
+    0 0 40px #ff003c,
+    0 0 80px #ff003c;
+
+    animation:pulse 2s infinite;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+.title{
+
+    color:#ff003c;
+
+    font-size:3rem;
+
+    margin-top:20px;
+
+    text-shadow:
+    0 0 10px #ff003c,
+    0 0 20px #ff003c,
+    0 0 40px #ff003c;
+
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.15);
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    75%{
+        transform:scale(1.15);
+    }
+}
+
+.message{
+
+    margin-top:15px;
+
+    color:white;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    text-shadow:0 0 10px rgba(255,255,255,.3);
+}
+
+.signature{
+
+    margin-top:20px;
+
+    color:#ff003c;
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+}
+
+/* Floating Elements */
+
+.heart,
+.balloon,
+.rose{
+    position:absolute;
+    bottom:-100px;
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .photo{
+        width:180px;
+        height:180px;
+    }
+
+    .title{
+        font-size:2.2rem;
+    }
+
+    .message{
+        font-size:1rem;
+    }
+
+    .signature{
+        font-size:1.1rem;
+    }
+}
+
+@media(max-width:480px){
+
+    .container{
+        padding:20px 15px;
+    }
+
+    .photo{
+        width:150px;
+        height:150px;
+    }
+
+    .title{
+        font-size:1.7rem;
+    }
+
+    .message{
+        font-size:.9rem;
+        line-height:1.6;
+    }
+
+    .signature{
+        font-size:1rem;
+    }
+}
+
+</style>
 </head>
+
 <body>
-    <header>
-        <div class="logo_container">
-        <a href="#"> <img class ="myntra-home" src="images/logo.jpg"></a>    
-        </div>
 
-        <div class="nav_bar">
-            <a href="#">MEN</a>
-            <a href="#">WOMEN</a>
-            <a href="#">KIDS</a>
-            <a href="#">HOME & LIVING</a>
-            <a href="#">BEAUTY</a>
-            <a href="#">STUDIO<sup>NEW</sup></a>
-        </div>
+<div class="container">
 
-        <div class="search_bar"> 
-            <span class="material-symbols-outlined search_icon">search</span>
-            <input class="search_input" placeholder="Search for products,brands and more">
-        </div>
-        
-       <div class="action_bar">
-
-    <div class="action_container">
-        <span class="material-symbols-outlined">person</span>
-        <span class="action_name">Profile</span>
+    <div class="photo">
+        <img src="koma.jpeg" alt="Birthday Love">
     </div>
 
-    <div class="action_container">
-        <span class="material-symbols-outlined">favorite</span>
-        <span class="action_name">Wishlist</span>
+    <h1 class="title">
+        ❤️ HAPPY BIRTHDAY ❤️
+    </h1>
+
+    <div class="message">
+
+        Happy Birthday My Love 🎂❤️
+        <br><br>
+
+        Every heartbeat whispers your name... 💖
+        <br>
+
+        You are my today, tomorrow and forever ✨
+        <br>
+
+        Your smile brightens my darkest days 🌹
+        <br>
+
+        No matter where life takes us,
+        my heart will always belong to you ❤️
+
     </div>
 
-    <div class="action_container">
-        <span class="material-symbols-outlined">shopping_bag</span>
-        <span class="action_name">Bag</span>
+    <div class="signature">
+        Forever Yours 💕
     </div>
 
 </div>
-    </header>
 
+<script>
 
-    <main>
-        <div class="banner_container">
-             <img  class ="banner_image" src ="images/banner.jpg" alt="main banner">
-            </div>
-            <div class="cotegray_heading"> MEDAL WORTH BRAND TO BAG</div>
+/* Hearts */
 
+function createHeart(){
 
-              <div class="cotegory_item">
-                 <a href="#"> <img class= "sale_item" src="images2/1.png"></a>
-                 <a href="#"><img  class ="sale_item" src="images2/2.png"></a>
-                 <a href="#"><img class="sale_item" src="images2/3.png"></a>
-                 <a href="#"> <img class= "sale_item" src="images2/4.png"></a>
-                 <a href="#"><img  class ="sale_item" src="images2/5.png"></a>
-                 <a href="#"><img class="sale_item" src="images2/6.png"></a>
-                 <a href="#"> <img class= "sale_item" src="images2/7.png"></a>
-                 <a href="#"><img  class ="sale_item" src="images2/8.png"></a>
-                 <a href="#"><img class="sale_item" src="images2/9.png"></a>
-                 <a href="#"> <img class= "sale_item" src="images2/10.png"></a>
-                 <a href="#"><img  class ="sale_item" src="images2/11.png"></a>
-                 <a href="#"><img class="sale_item" src="images2/12.png"></a>
-            </div>   
-            
+    const heart=document.createElement("div");
 
-            <div class="cotegray_heading"> Shop by cotegory</div>
-                <div class="cotegory_item">
-                 <a href="#"> <img class= "sale_item" src="images/1.jpg"></a>
-                 <a href="#"><img  class ="sale_item" src="images/2.jpg"></a>
-                 <a href="#"><img class="sale_item" src="images/3.jpg"></a>
-                 <a href="#"> <img class= "sale_item" src="images/4.jpg"></a>
-                 <a href="#"><img  class ="sale_item" src="images/5.jpg"></a>
-                 <a href="#"><img class="sale_item" src="images/6.jpg"></a>
-                 <a href="#"> <img class= "sale_item" src="images/7.jpg"></a>
-                 <a href="#"><img  class ="sale_item" src="images/8.jpg"></a>
-                 <a href="#"><img class="sale_item" src="images/9.jpg"></a>
-                 <a href="#"> <img class= "sale_item" src="images/10.jpg"></a>
-                
-            </div>   
-            
-     </main>
- 
-    <footer>Footer</footer>
+    heart.classList.add("heart");
+
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*window.innerWidth+"px";
+
+    heart.style.fontSize=
+    (20+Math.random()*35)+"px";
+
+    heart.style.animationDuration=
+    (4+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+/* Balloons */
+
+function createBalloon(){
+
+    const balloon=document.createElement("div");
+
+    balloon.classList.add("balloon");
+
+    const balloons=[
+        "🎈",
+        "💖",
+        "💕",
+        "💝"
+    ];
+
+    balloon.innerHTML=
+    balloons[
+        Math.floor(
+            Math.random()*balloons.length
+        )
+    ];
+
+    balloon.style.left=
+    Math.random()*window.innerWidth+"px";
+
+    balloon.style.fontSize=
+    (30+Math.random()*25)+"px";
+
+    balloon.style.animationDuration=
+    (6+Math.random()*5)+"s";
+
+    document.body.appendChild(balloon);
+
+    setTimeout(()=>{
+        balloon.remove();
+    },10000);
+}
+
+/* Roses */
+
+function createRose(){
+
+    const rose=document.createElement("div");
+
+    rose.classList.add("rose");
+
+    rose.innerHTML="🌹";
+
+    rose.style.left=
+    Math.random()*window.innerWidth+"px";
+
+    rose.style.fontSize=
+    (20+Math.random()*20)+"px";
+
+    rose.style.animationDuration=
+    (7+Math.random()*5)+"s";
+
+    document.body.appendChild(rose);
+
+    setTimeout(()=>{
+        rose.remove();
+    },12000);
+}
+
+setInterval(createHeart,250);
+setInterval(createBalloon,700);
+setInterval(createRose,1200);
+
+</script>
+
 </body>
 </html>
